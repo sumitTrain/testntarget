@@ -1,0 +1,741 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+    <meta charset="utf-8" />
+    <title>Checkout</title>
+    <link rel="canonical" href="checkout.html"/>
+    <link rel="shortcut icon" href="../../../../etc/designs/geometrixx-outdoors/favicon.ico"/>
+    
+    
+    <script>
+        
+        document.documentElement.className+=' js';
+        
+        
+        
+    </script>
+       <link href="/geometrixx/designs/geometrixx-outdoors.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="/geometrixx/designs/geometrixx-outdoors/clientlibs_desktop_v1.css" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+
+    <link rel="alternate" data-cq-role="site.variant" title="English" hreflang="en" data-bmap-devgroups="browser,oldBrowser,highResolutionDisplay" href="#" data-bmap-currentvar="true"/>
+
+    <link rel="alternate" data-cq-role="site.variant" title="English" hreflang="en" data-bmap-devgroups="smartphone,tablet,highResolutionDisplay" href="#"/>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/geometrixx/js/products.js" type="text/javascript"></script>
+    
+    
+   <script>
+      function getQs(key) {
+         var vars = [],
+            hash;
+         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+         for (var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+         }
+         return vars[key];
+      }
+
+        productId = getQs("productId") || "interlakentrek"
+        var items = products["items"]
+        entity = {}
+        entity.id = "";
+        entity.name = "";
+        entity.value = "";
+        entity.thumbnailUrl = "";
+        entity.pageUrl = "";
+        entity.categoryId = ""
+        for (var i=0;i<items.length;i++){
+          var it = items[i];
+          if(it["eid"] == productId){
+            entity.id = it["eid"];
+            entity.name = it["name"];
+            entity.value = it["value"];
+            entity.thumbnailUrl = it["thumbnailUrl"];
+            entity.pageUrl = it["pageUrl"];
+            entity.categoryId = it["categoryId"];
+            break;
+          } 
+        }
+        if(entity.id == ""){
+            for (var i=0;i<items.length;i++){
+             var it = items[i];
+             if(it["eid"] == "interlakentrek"){
+               entity.id = it["eid"];
+               entity.name = it["name"];
+               entity.value = it["value"];
+               entity.thumbnailUrl = it["thumbnailUrl"];
+               entity.pageUrl = it["pageUrl"];
+               entity.categoryId = it["categoryId"];
+               break;
+             } 
+           } 
+         }
+   		// 
+		// targetPageParams helper function goes here
+		//
+
+	</script>  
+   <!-- DTM HEADER TAG GOES HERE -->
+</head>
+
+
+        <body class="page&#x20;page-sidebar&#x20;page-sidebar-right">
+            
+
+            <div class="page-header-content">
+                <header>
+    <div class="page-systemnav">
+	    <div class="sys-nav-wrapper">
+	        <div class="search">
+<form class="search-form" action="/content/geometrixx-outdoors/en/toolbar/search.html" method="get">
+    <p class="search-field">
+        <label for="search-field" style="display: none">Search: </label>
+        <input id="search-field" type="text" name="q" placeholder="Search" value="" />
+    </p>
+    <p class="search-submit">
+        <input type="submit" />
+    </p>
+</form>
+</div>
+
+	        <div class="userinfo">
+<nav><ul>
+    
+    <li class="cartpage">
+
+
+        <script id="cq-hovercart-template" type="text/x-handlebars-template">
+<div id="cq-hovercart">
+    <div class="cq-hovercart-border">
+        <div class="cq-hovercart-inner">
+            <h1>{{title}}</h1>
+            {{#unless cartEmpty}}
+            
+                <a class="cq-hovercart-checkout" href="/content/geometrixx-outdoors/en/user/checkout.html">Checkout ➙</a>
+            
+            <table>
+                {{#each entries}}
+                <tr data-product-page="{{this.page}}">
+                    <td class="cq-hovercart-thumb"><img src="{{this.thumbnail}}" alt="{{this.title}}"/></td>
+                    <td class="cq-hovercart-product-title">
+                        <a href="{{this.page}}">{{this.title}}</a>
+                        {{#if this.promotion}}
+                        <div class="cq-hovercart-promotion">{{{this.promotion.message}}}</div>
+                        {{/if}}
+                    </td>
+                    <td class="cq-hovercart-quantity">{{this.quantity}}</td>
+                    <td class="cq-hovercart-price">{{this.priceFormatted}}</td>
+                </tr>
+                {{/each}}
+                {{#each promotions}}{{#if this.message}}{{#unless this.cartEntry}}
+                <tr>
+                    <td class="cq-hovercart-promotion" colspan="4">{{{this.message}}}</td>
+                </tr>
+                {{/unless}}{{/if}}{{/each}}
+            </table>
+            {{/unless}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+</script>
+        
+<a href="cart.html" class="cq-hovercart-link">My Cart</a>
+</li>
+    
+    <li class="login cq-cc-profile-anonymous"><div class="parbase login sociallogin">
+
+
+
+
+
+
+<link rel="stylesheet" href="/geometrixx/etc/clientlibs/social/connect/themes/default.css" type="text/css">
+<script type="text/javascript" src="/geometrixx/clientlibs/social/connect.js"></script>
+
+
+
+
+
+            <a href="checkout.html#"  class="geosociallogin-signin-sociallogin-content-geometrixx-outdoors-en
+           -user-checkout-jcr-content-userinfo-sociallogin">
+                Sign In or Register
+            </a>
+
+<div id="sociallogin-content-geometrixx-outdoors-en-user-checkout-jcr-content-userinfo-sociallogin" class="social-login-popup">
+    <div class="cqlogin">
+        
+
+
+
+
+
+
+<div class="parsys_column colctrl-2c">
+    <div class="parsys_column colctrl-2c-c0">
+        <div class="title section">
+            <h2>Member sign in
+            </h2>
+        </div>
+        <div class="parbase login section">
+            <script type="text/javascript">
+                function cq5forms_validate_login() {
+                    console.log("some validation will happen here.");
+                }
+            </script>
+            <div class="text section">If you already have an account you can sign in below.</div>
+
+            <form method="POST" action="/content/geometrixx-outdoors/en/user/checkout/j_security_check" id="sociallogin" name="sociallogin" enctype="multipart/form-data" onsubmit="return cq5forms_validate_sociallogin();">
+
+                <input type="hidden" name="resource" value="&#x2f;content&#x2f;geometrixx-outdoors&#x2f;en&#x2f;user&#x2f;checkout.html">
+                <input type="hidden" name="_charset_" value="UTF-8"/>
+
+                <p class="login_username_group">
+                    <label for="sociallogin_username">Username
+                    </label>
+                    <input id="sociallogin_username"
+                           class="cqusername form_field form_field_text login_username" type="text" name="j_username"
+                           tabindex="9990"/>
+                </p>
+
+                <p class="login_password_group">
+                    <label for="sociallogin_password">Password
+                    </label>
+                    <input id="sociallogin_password"
+                           class="form_field form_field_text login_password cqpassword" type="password" autocomplete="off"
+                           name="j_password" tabindex="9991"/>
+                </p>
+
+                <p class="login_submit_group">
+                    <label for="login_submit"><input id="login_submit" class="form_button_submit" type="submit"
+                                                     value="Sign in"
+                                                     
+                                                     tabindex="9992"/></label>
+                </p>
+            </form>
+        </div>
+    </div>
+    
+        <div class="parsys_column colctrl-2c-c1">
+            <div class="title section">
+                <h2>Create account</h2>
+            </div>
+            <div class="text parbase section">
+                <ul>
+                    <li>Get free shipping on all orders of $100 or more</li>
+                    <li>Free returns, always</li>
+                    <li>Express checkout</li>
+                    <li>Save and share your favorite products with your friends</li>
+                </ul>
+            </div>
+            <div class="submit section">
+                <div class="form_row">
+                    <div class="form_leftcol">
+                        <div class="form_leftcollabel"><span>&nbsp;</span></div>
+                        <div class="form_leftcolmark">&nbsp;</div>
+                    </div>
+                    <div class="form_rightcol">
+                        <form >
+                            <input type="submit" class="form_button_submit" name="create"
+                                   value="Create Account"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="form_row_description"></div>
+            </div>
+        </div>
+    
+</div>
+
+    </div>
+
+    
+    <div style="clear:both"></div>
+    
+    <div class="submit section">
+        <div class="form_row">
+            <div class="form_leftcol">
+                <div class="form_leftcollabel"><span>&nbsp;</span></div>
+                <div class="form_leftcolmark">&nbsp;</div>
+            </div>
+            <div class="form_rightcol">
+                <input type="submit" tabindex="9993" class="form_button_submit login_facebook" name="create"
+                       value="Sign in with Facebook &rsaquo;"
+                       onclick="//console.debug(
+                           'sociallogin\x2Dcontent\x2Dgeometrixx\x2Doutdoors\x2Den\x2Duser\x2Dcheckout\x2Djcr\x2Dcontent\x2Duserinfo\x2Dsociallogin',
+                           '\x2Fetc\x2Fcloudservices\x2Ffacebookconnect\x2Fgeometrixx\x2Doutdoorsfacebookapp',
+                           'cb4da2dbc7a22ad11bacb8e39ef92929',
+                           '/j_security_check',
+                           ''
+                       );return false;"/>
+            </div>
+        </div>
+        <div class="form_row_description"></div>
+    </div>
+    
+    <div class="submit section">
+        <div class="form_row">
+            <div class="form_leftcol">
+                <div class="form_leftcollabel"><span>&nbsp;</span></div>
+                <div class="form_leftcolmark">&nbsp;</div>
+            </div>
+            <div class="form_rightcol">
+                <input type="submit" tabindex="9994" class="form_button_submit login_twitter" name="create"
+                       value="Sign in with Twitter &rsaquo;"
+                       onclick="//console.debug(
+                           'sociallogin\x2Dcontent\x2Dgeometrixx\x2Doutdoors\x2Den\x2Duser\x2Dcheckout\x2Djcr\x2Dcontent\x2Duserinfo\x2Dsociallogin',
+                           '\x2Fetc\x2Fcloudservices\x2Ftwitterconnect\x2Fgeometrixx\x2Doutdoors\x2Dtwitter\x2Dapp',
+                           '968485696f92b673e2c44ebbdf097e94',
+                           '/j_security_check',
+                           ''
+                       );return false;"/>
+            </div>
+        </div>
+        <div class="form_row_description"></div>
+    </div>
+    
+</div>
+
+</div>
+</li>
+    
+</ul></nav>
+</div>
+
+	    </div>
+    </div>
+    <div class="topnav" id="topnav">
+<div class="nav-wrapper ">
+<nav>
+    
+        <h1><a href="../../index.html">English</a></h1>                  <ul>
+                     <li class="topnav-item-3&#x20;topnav-last"><a href="../equipment.html">Equipment</a>
+                     </li>
+                     <li class="topnav-item-1&#x20;topnav-first&#x20;topnav-last"><a href="../men.html">Men&#x27;s</a>
+                     </li>
+                     <li class="topnav-item-2&#x20;topnav-last"><a href="../women.html">Women&#x27;s</a>
+                     </li>
+                     <li class="topnav-item-4&#x20;topnav-last"><a href="#">Activities</a>
+                     </li>
+                     <li class="topnav-item-5&#x20;topnav-last"><a href="#">Community</a>
+                     </li>
+                     <li class="topnav-item-6&#x20;topnav-last"><a href="#">Support</a>
+                     </li>
+                     <li class="topnav-item-7&#x20;topnav-last"><a href="#">Brand</a>
+                     </li>
+                  </ul>
+</nav>
+<div class="topnavshadow"></div>
+</div>
+
+</div>
+
+</header>
+
+			</div>
+            <div id="main" class="page-main">
+           <div class="page-main" id="main">
+                
+<div class="page-content order">
+    
+    <div class="breadcrumb"><ul><li class="breadcrumb-item-2 breadcrumb-first"><a href="/content/geometrixx-outdoors/en.html">English</a></li><li class="breadcrumb-item-4"><a href="/content/geometrixx-outdoors/en/user/checkout.html">Checkout</a></li><li class="breadcrumb-item-5 breadcrumb-last"><a href="/content/geometrixx-outdoors/en/user/checkout/order.html">Order</a></li></ul>
+</div>
+
+    <section class="page-par left">
+        <div class="par parsys"><div class="title section">
+
+<h1 class="checkout-title">Confirmation</h1>
+
+</div>
+<div class="title section">
+
+<h2 class="checkout-title">Review the information below before placing your order.</h2>
+
+</div>
+
+<form enctype="multipart/form-data" name="order" id="order" action="/content/geometrixx-outdoors/en/user/checkout/order.html" method="POST"><input type="hidden" value="order" name=":formid"><input type="hidden" value="/content/geometrixx-outdoors/en/user/checkout/order/jcr:content/par/order_form" name=":formstart"><input type="hidden" value="UTF-8" name="_charset_"><input  type="hidden" value="order/thank-you.html" name=":redirect"><div class="form">
+</div>
+<div class="parsys_column colctrl-2csidebar"><div class="parsys_column colctrl-2csidebar-c0"><div class="title section">
+
+<h3>Billing Address</h3>
+
+</div>
+<div class="addressbook section">
+
+<div data-resource-path="/content/geometrixx-outdoors/en/user/checkout/order/jcr:content/par/addressbook" class="addressbook">
+    <div class="addressbook-title"></div><div data-address-path="" class="address">
+    <div class="address-fields">
+
+        
+<div class="form_row">
+            <div class="form_rightcol">
+                <div class="firstname">Lab</div>
+                <div class="lastname">User Free Account</div>
+            </div>
+            <div class="form_rightcol">
+                <div class="street1">Some Address 123</div>
+            </div>
+            <div class="form_rightcol">
+                <div class="street2"></div>
+            </div>
+            <div class="form_rightcol">
+                <div class="city">Some City</div>
+            </div>
+            <div class="form_rightcol">
+                <div class="state">Some State</div>
+                <div class="zip">Some Zip 456</div>
+            </div>
+            <div class="form_rightcol">
+                <div class="country">Come Country</div>
+            </div>
+        </div><input type="hidden" value="" name="billing.addressPath">
+        <input type="hidden" value="ats" name="billing.firstname">
+        <input type="hidden" value="ats" name="billing.lastname">
+        <input type="hidden" value="" name="billing.street1">
+        <input type="hidden" value="" name="billing.street2">
+        <input type="hidden" value="" name="billing.city">
+        <input type="hidden" value="" name="billing.state">
+        <input type="hidden" value="" name="billing.zip">
+        <input type="hidden" value="AR" name="billing.country"></div><script type="text/javascript">
+        function billing_address_fields_precheck(formId) {return true;
+        }
+    </script>
+</div>
+
+</div>
+
+</div>
+</div><div class="parsys_column colctrl-2csidebar-c1"><div class="title section">
+
+<h3>Shipping Address</h3>
+
+</div>
+<div class="addressbook section">
+<div data-resource-path="/content/geometrixx-outdoors/en/user/checkout/order/jcr:content/par/addressbook_0" class="addressbook">
+    <div class="addressbook-title"></div><div data-address-path="" class="address">
+    <div class="address-fields">
+
+        
+<div class="form_row">
+            <div class="form_rightcol">
+                <div class="firstname">Lab</div>
+                <div class="lastname">User</div>
+            </div>
+            <div class="form_rightcol">
+                <div class="street1">Salt Palace Convention Center</div>
+            </div>
+            <div class="form_rightcol">
+                <div class="street2"></div>
+            </div>
+            <div class="form_rightcol">
+                <div class="city">Salt Lake City</div>
+            </div>
+            <div class="form_rightcol">
+                <div class="state">UT</div>
+                <div class="zip">84101</div>
+            </div>
+            <div class="form_rightcol">
+                <div class="country">United States</div>
+            </div>
+        </div><input type="hidden" value="" name="shipping.addressPath">
+        <input type="hidden" value="adst" name="shipping.firstname">
+        <input type="hidden" value="atsd" name="shipping.lastname">
+        <input type="hidden" value="" name="shipping.street1">
+        <input type="hidden" value="" name="shipping.street2">
+        <input type="hidden" value="" name="shipping.city">
+        <input type="hidden" value="" name="shipping.state">
+        <input type="hidden" value="" name="shipping.zip">
+        <input type="hidden" value="AR" name="shipping.country"></div><script type="text/javascript">
+        function shipping_address_fields_precheck(formId) {return true;
+        }
+    </script>
+</div>
+
+</div>
+
+</div>
+</div></div><div style="clear:both"></div><div class="parbase shoppingcart section">
+
+
+<div id="cq-cart-_content_geometrixx-outdoors_en_user_checkout_order_jcr_content_par_cartsummary">
+    
+   
+    
+
+    <table class="entries summary">
+        <tbody><tr>
+            <th class="product" colspan="2">Product</th>
+            <th class="quantity">Quantity</th>
+
+            <th class="price">Price</th>
+
+        </tr>
+
+        <tr class="entry" id="sc-item">
+
+            <td class="thumbnail">
+                <a href="en/equipment/hiking/interlaken-trek.html">
+                    <img width="150" alt="Interlaken Trek" src="/geometrixx/en/equipment/hiking/interlaken-trek/_jcr_content/par/product/image.nav.jpg">
+                </a>
+            </td>
+
+            <td colspan="1" class="name">
+                <a href="en/equipment/hiking/interlaken-trek.html">Interlaken Trek</a>
+
+                   <span class="description">Sport Hikers' Footwear</span>
+
+                   <span class="size">Size: 11</span>
+
+            </td>
+
+            <td class="quantity">1</td>
+
+            <td class="price">$189.90</td>
+
+        </tr>
+
+    </tbody></table>
+</div></div>
+<div class="title section">
+
+<h3>Step 4: Payment information</h3>
+
+</div>
+<div class="parsys_column colctrl-2c"><div class="parsys_column colctrl-2c-c0"><div class="creditcard section">
+
+<div class="form_row">
+    <div style="display: none;" class="form_leftcol"><div class="form_leftcollabel"><label for="order_payment">Credit Card</label></div><div class="form_leftcolmark"></div></div>
+
+</div> 
+<div class="form_row">
+    <div class="form_rightcol"><div class="form_row_description"><label for="order_payment-credit-card-type">Credit Card Type</label></div>
+
+        <select name="payment.credit-card-type" id="order_payment-credit-card-type" class="form_field form_field_select form_cc_type"><option value="visa">Visa</option><option value="mc">MasterCard</option><option value="amex">American Express</option>
+        </select>
+        <span class="form_rightcolmark"> *</span>
+    </div>
+</div>
+<div class="form_row">
+    <div class="form_rightcol"><div class="form_row_description"><label for="order_payment-primary-account-number">Credit Card Number</label></div>
+
+        <input size="16" autocomplete="off" value="1234567890123456" name="payment.primary-account-number" id="order_payment-primary-account-number" class="form_field form_field_text form_cc_number">
+        <span class="form_rightcolmark"> *</span>
+    </div>
+</div>
+<div class="form_row">
+    <div class="form_rightcol"><div class="form_row_description"><label for="order_payment-name-on-card">Name on Card</label></div>
+
+        <input size="16" value="Lab User" name="payment.name-on-card" id="order_payment-name-on-card" class="form_field form_field_text form_cc_nameoncard">
+        <span class="form_rightcolmark">&nbsp;</span>
+    </div>
+</div>
+<div class="form_row">
+    <div class="form_rightcol">
+        
+        <div class="form_cc_security_code"><div class="form_row_description"><label for="order_payment-ccv">Security Code</label></div>
+
+            <input autocomplete="off" value="999" name="payment.ccv" id="order_payment-ccv" class="form_field form_field_text form_cc_ccv">
+            <span class="form_rightcolmark"> *</span>
+        </div>
+        
+        <div class="form_cc_expiry_month"><div class="form_row_description"><label for="order_payment-expiration-date-month">Exp Month</label></div>
+
+            <input value="05" name="payment.expiration-date-month" id="order_payment-expiration-date-month" class="form_field form_field_text form_cc_expiry_month">
+            <span class="form_rightcolmark"> *</span>
+        </div>
+        <div class="form_cc_expiry_separator">/</div>
+        <div class="form_cc_expiry_year"><div class="form_row_description"><label for="order_payment-expiration-date-year">Exp Year</label></div>
+
+            <input value="2015" name="payment.expiration-date-year" id="order_payment-expiration-date-year" class="form_field form_field_text form_cc_expiry_year">
+            <span class="form_rightcolmark"> *</span>
+        </div>
+    </div>
+</div> <div class="form_row_description"></div>
+
+</div>
+</div><div class="parsys_column colctrl-2c-c1">
+<div class="parbase image section"><div id="cq-image-jsp-/content/geometrixx-outdoors/en/user/checkout/order/jcr:content/par/cards_accepted"><img title="" alt="file" class="cq-dd-image" src="/geometrixx/en/user/checkout/_jcr_content/par/cards_accepted.img.png"></div>
+    
+    
+
+
+</div>
+
+</div></div><div style="clear:both"></div><div class="submit submitorder section">
+
+
+    <div class="form_row">
+      <div class="form_leftcol"><div class="form_leftcollabel"><span>&nbsp;</span></div><div class="form_leftcolmark">&nbsp;</div></div>
+
+      <div class="form_rightcol">
+        <input type="button" id="purchase-btn" value="Submit Order" name="Submit" class="form_button_submit cq-checkout" onclick="window.location.replace('/geometrixx/en/user/thank-you.html')">
+      </div>
+    </div>
+    <div class="form_row_description"></div>
+
+
+
+</div>
+<div class="section end">
+
+<div class="form_row">
+   <div class="form_leftcol"></div>
+   <div class="form_rightcol">
+</div>
+  </div><div class="form_row_description"></div>
+</div></form>
+
+</div>
+
+    </section>
+    <aside class="page-aside right par">
+        <div class="parsys sidebar"><div class="title section">
+
+<h1>Cart Summary</h1>
+
+</div>
+<div class="text parbase section">
+<p>Login or <a href="/geometrixx/en/user/#">register</a> in order to checkout more quickly.</p>
+
+
+
+</div>
+<div class="parbase cart_total section">
+<div id="cq-cart-total-_content_geometrixx-outdoors_en_user_checkout_order_jcr_content_sidebar_subtotal">
+    <p class="cq-cart-total pre_tax">
+        <span style="float:right" id="item-subtotal">$189.90</span>
+        Item subtotal
+        </p>
+  
+</div></div>
+<div class="parbase cart_total section">
+<div id="cq-cart-total-_content_geometrixx-outdoors_en_user_checkout_order_jcr_content_sidebar_tax">
+    <p class="cq-cart-total tax">
+        <span style="float:right">$11.39</span>
+        Tax
+        </p>
+
+</div></div>
+<div class="parbase cart_total section">
+<div id="cq-cart-total-_content_geometrixx-outdoors_en_user_checkout_order_jcr_content_sidebar_shipping">
+    <p class="cq-cart-total shipping">
+        <span style="float:right">$10.00</span>
+        Shipping
+        </p>
+ 
+</div></div>
+<div class="parbase image section">
+    
+    
+
+
+</div>
+<div class="vouchers parbase section">
+<div id="cq-vouchers-_content_geometrixx-outdoors_en_user_checkout_order_jcr_content_sidebar_vouchers">
+    
+    <p>
+        </p><form action="/content/geometrixx-outdoors/en/user/checkout/order/_jcr_content/sidebar/vouchers.add.html" method="post">
+            <input type="hidden" value="/content/geometrixx-outdoors/en/user/checkout/order.html" name="redirect">
+            
+            
+            <input type="text" placeholder="Coupon code" id="cq-voucher-code-1425331137159" name="code">
+            <input type="submit" value="Add">
+        
+        </form>
+    <p></p>
+    
+  
+</div>
+</div>
+<div class="parbase image section">
+    
+  
+
+</div>
+<div class="parbase cart_total section">
+<div id="cq-cart-total-_content_geometrixx-outdoors_en_user_checkout_order_jcr_content_sidebar_total">
+    <p class="cq-cart-total order">
+        <span style="float:right" id="item-total">$211.29</span>
+        Total
+        </p>
+ 
+</div></div>
+
+</div>
+
+    </aside>
+</div>
+<div class="page-footer">
+    
+<footer>
+    <nav><div class="toolbar">&nbsp;&nbsp;<a class="first" href="/content/geometrixx-outdoors/en/toolbar/about-us.html">About Us</a><a href="/content/geometrixx-outdoors/en/toolbar/privacy-policy.html">Privacy Policy</a><a href="/content/geometrixx-outdoors/en/toolbar/terms-of-use.html">Terms of Use</a>
+</div>
+</nav>
+    <p class="copyright">&copy; 2015 Geometrixx Outdoors. All rights reserved.</p>
+</footer>
+
+</div>
+
+            </div>
+
+
+
+
+
+
+<!--
+More detailed timing info is available by uncommenting some code in the timing.jsp component
+Timing chart URL:
+http://chart.apis.google.com/chart?chtt=checkout.html+%2893ms%29&cht=bhs&chxt=x&chco=c6d9fd,4d89f9&chbh=a&chds=0,93,0,93&chxr=0,0,93&chd=t:0,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,31,31,31,31,31,31,31,31,31,31,31,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,78,78,78,78,78,78,78,78,78,78,78|15,0,0,0,0,0,0,0,0,0,0,0,0,16,16,16,0,0,0,0,0,0,0,0,15,31,62,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,0,0,0,0,0,0,0,15&chly=head.jsp|config.jsp|contexthub%29|contexthub.jsp|init.jsp|mvt_stats.jsp|stats.jsp|servicelibs.jsp|browsermap.jsp|init.jsp|clientcontext_optimize...|search.jsp|template.jsp|hovercart.jsp|userinfo.jsp|header.jsp|cqlogin.jsp|sociallogin.jsp|topnav.jsp|cookie_error.jsp|breadcrumb.jsp|title.jsp|abacus.jsp|init.jsp|start.jsp|parsys.jsp|main.jsp|init.jsp|clientvalidation.jsp|init.jsp|clientvalidation.jsp|formclientvalidation.jsp|addfields.jsp|title.jsp|countries.jsp|address.jsp|selectedaddress.html.jsp|addressbook.jsp|title.jsp|countries.jsp|address.jsp|selectedaddress.html.jsp|addressbook.jsp|title.jsp|radio.jsp|image.jsp|image.jsp|submit.jsp|end.jsp|trackcheckout.jsp|title.jsp|text.jsp|cart_total.jsp|image.jsp|vouchers.jsp|image.jsp|cart_total.jsp|text.jsp|parsys.jsp|toolbar.jsp|footer.jsp&chs=600x500
+-->
+
+
+            <div class="servicecomponents cloudservices">
+</div>
+<script type="text/javascript">
+    $("#purchase-btn").attr("onclick","window.location.replace('/geometrixx/en/user/thank-you.html?productId="+productId+"')");
+    $(document).ready(function(){
+        $("#item-total").html("$"+(parseFloat(entity.value)+21.39));
+        $("#item-subtotal").html("$"+entity.value);
+        var innerHtml = ''+
+                    '<td class="thumbnail">'+
+                '<a href="'+entity.pageUrl+'">'+
+                    '<img width="150" alt="'+entity.name+'" src="'+entity.thumbnailUrl+'">'+
+                '</a>'+
+            '</td>'+
+
+            '<td colspan="1" class="name">'+
+                '<a href="'+entity.pageUrl+'">'+entity.name+'</a>'+
+
+                   '<span class="description">Equipment and Outdoor Gear</span>'+
+
+                   '<span class="size">Size: 11</span>'+
+
+            '</td>'+
+
+            '<td class="quantity">1</td>'+
+
+            '<td class="price">$'+entity.value+'</td>';
+            $("#sc-item").html(innerHtml);
+
+
+    });
+</script>            
+   
+   <script type="text/javascript">
+       //
+	   // Analytics Page Code goes here
+	   //
+   </script>
+
+</body>
+    
+
+</html>

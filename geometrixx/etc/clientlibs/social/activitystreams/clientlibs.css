@@ -1,0 +1,280 @@
+/*
+LESS Global vars
+TODO - add more vars to LESS for reused vals below
+*/
+.activities-container {
+  min-width: 100px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding-bottom: 3px;
+}
+.activities-container .activities-header {
+  padding: 10px;
+  position: relative;
+  zoom: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+.activities-container .activities-header h3 {
+  font-size: 11pt!important;
+  font-weight: normal!important;
+}
+.activities-container .activities-header h3,
+.activities-container .activities-header h4,
+.activities-container .activities-header p {
+  margin: 0!important;
+  padding: 0!important;
+  line-height: 1.2!important;
+  width: auto!important;
+}
+.activities-container .activities-header a {
+  color: white !important;
+}
+.activities-container .activities-header a:hover {
+  text-decoration: underline!important;
+}
+.activities-container .activities-header a:hover,
+.activities-container .activities-header a:active {
+  outline: 0;
+}
+.activities-container .activities-header a:-webkit-any-link {
+  color: -webkit-link;
+  text-decoration: underline;
+  cursor: auto;
+}
+.activities-container .activities {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}
+.activities-container .activities a {
+  color: #1985B5 !important;
+}
+.activities-container .activities .activity {
+  padding-left: 1px;
+  display: none;
+}
+.activities-container .activities .comment {
+  margin-top: 0px;
+}
+.activities-container .activities .activities .activity-clear {
+  clear: both;
+}
+.activities-container .activities .entries_content {
+  border-bottom: 1px dotted #DDD;
+  position: relative;
+}
+.activities-container .activities .entries_content .entry_clickable {
+  cursor: pointer;
+}
+.activities-container .activities .entries_content .entry_container {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 10px 0px 0px 0px;
+  min-height: 31px;
+  height: auto;
+}
+.activities-container .activities .entries_content .entry_container a {
+  color: #446F99;
+}
+.activities-container .activities .entries_content .entry_container .entry_avatar {
+  padding-left: 5px;
+  padding-right: 5px;
+  float: left;
+}
+.activities-container .activities .entries_content .entry_container .entry_icon_type_container {
+  height: 20px;
+  width: 20px;
+}
+.activities-container .activities .entries_content .entry_container .entry_avatar_container {
+  background-repeat: no-repeat;
+}
+.activities-container .activities .entries_content .entry_container .entry_item_text_p {
+  overflow: hidden;
+  padding-left: 5px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-end: 0;
+  font-size: 12px;
+  font-family: Helvetica;
+  margin-left: 37px;
+}
+.activities-container .activities .entries_content .entry_container .entry_username {
+  color: #545454;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Myriad, arial, serif;
+}
+.activities-container .activities .entries_content .entry_container .entry_item_title {
+  color: #545454;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Myriad, arial, serif;
+}
+.activities-container .activities .entries_content .entry_container .entry_stats {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+}
+.activities-container .activities .entries_content .entry_container .entry_item_time {
+  font-size: 10px;
+  font-weight: bold;
+  color: #777;
+  position: absolute;
+  right: 1px;
+  top: 4px;
+}
+.activities-container .activities .entries_content .entry_container .entry_item_moderation_status {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
+.activities-container .activities .entries_content .entry_container .entry_screenname {
+  font-weight: bold;
+}
+div::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+div::-webkit-scrollbar-track {
+  border-left: 6px solid transparent;
+  border-right: 1px solid transparent;
+  background-clip: padding-box;
+}
+div::-webkit-scrollbar-thumb {
+  min-height: 28px;
+  padding-top: 100px;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-top: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+  background-clip: padding-box;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+/** People list */
+
+div.peoplelist p {
+    border-bottom:thick solid #be4b16;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+div.peoplelist ul{
+    padding-left:0;
+    list-style:none;
+}
+
+div.peoplelist a{
+   text-decoration:none;
+}
+
+div.peoplelist a:hover{
+   text-decoration:none;
+   font-weight:bold;
+   font-size:15px;
+}
+
+div.peoplelist ul li{
+    list-style:none;
+    height: 45px;
+    padding: 2px 0 2px 0;
+    border-bottom:thin solid #A8A8A8;
+}
+
+div.peoplelist ul li div.avatar{
+    margin-top:10px;
+    float:left;
+}
+
+div.peoplelist ul li div.avatar a{
+   text-decoration:none;
+}
+
+div.peoplelist ul li div.avatar a:hover{
+   text-decoration:none;
+   font-weight:bold;
+   font-size:15px;
+}
+
+div.peoplelist ul li div.avatar img{
+    height:32px;
+    width:32px;
+}
+
+div.avatar{
+    height: 40px;
+    width: 400px;
+}
+
+div.error {
+    color:#A9A9A9;
+    font-size:larger;
+}
+
+div.peoplelist .submitButton {
+    border: 0px !important;
+    background-color: #e65020;
+    color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    height: 17px;
+    letter-spacing: normal;
+}
+
+div.peoplelist div.base.relation.profile{
+    display: inline-block;
+}
+
+#txtSearch {
+    padding-left:20px;
+    padding-top:5x;
+    margin-top:10px;
+    height:22px;
+    background-image: url('clientlibs/images/peoplelist/search.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    color:gray;
+}
+
+
+div.peoplelist ul li div.avatar div.tool-bar-delete{
+    display: inline-block;
+    float:right;
+    margin-top:15px;
+    color:#be4b16;
+}
+
+div.peoplelist ul li div.avatar div.tool-bar-delete a{
+    display: inline-block;
+    color:#be4b16;
+}
+
+div.peoplelist ul li div.avatar span.tool-bar-separator{
+    display: inline-block;
+    float:right;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-right: 10px;
+    color:#D0D0D0;
+}
+
+div.outer {
+    overflow-y:auto;
+    overflow-x:hidden;
+    height: auto;
+    max-height: 500px;
+}
+
+div.peoplelist div.loadmore a{
+    z-index:1;
+    position:relative;
+}
+

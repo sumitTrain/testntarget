@@ -1,0 +1,12 @@
+.page .par .video {
+  height: 394;
+  width: 700;
+}
+
+.page_mobile .par .video {
+  width: 95%;
+}
+.orangeText {
+	color:#be4b16;
+}
+
